@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: default;
+}
+
+/* PRIMARY */
+
+$colores: (
+  Soft-blue: #8bacda ,
+  CyanColor: hsl(178, 100%, 50%),
+  CyanColorOpacity: rgba(0, 255, 247,0.5),
+  BlueBackground:hsl(217, 54%, 11%),  //MAIN BACKGROUND-COLOR
+  BlueCard: hsl(216, 50%, 16%), //CARD BACKGROUND
+  BlueLine:hsl(215, 32%, 27%),   //LINE
+  WhiteColor: hsl(0, 0%, 100%) ,
+);

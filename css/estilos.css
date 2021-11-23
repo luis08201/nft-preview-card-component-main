@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: default;
+}
+
+/* PRIMARY */
+body {
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  background-color: #0d192b;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  padding: 24px;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.attribution {
+  color: #8bacda;
+  font-weight: 300;
+  text-align: center;
+  padding: 16px;
+}
+
+.attribution--cta {
+  text-decoration: none;
+  color: white;
+  -webkit-transition: color 0.5s 0s ease;
+  transition: color 0.5s 0s ease;
+  cursor: pointer;
+}
+
+.attribution--cta:hover {
+  color: #00fff7;
+}
+
+.attribution--cta:active {
+  color: #00fff7;
+}
+
+.main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-areas: "picture" "article" "footer";
+  background-color: #14253d;
+  padding: 24px;
+  min-width: 327px;
+  max-width: 350px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 8px;
+  gap: 24px;
+}
+
+.main__picture {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: picture;
+  position: relative;
+  min-width: 278px;
+  max-width: 302px;
+  min-height: 278px;
+  max-height: 302px;
+}
+
+.main__picture--banner {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 255, 247, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 8px;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s 0s ease;
+  transition: opacity 0.5s 0s ease;
+  cursor: pointer;
+}
+
+.main__picture--banner--ico {
+  display: block;
+  width: 48px;
+  height: 48px;
+  background-image: url(../images/icon-view.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.main__picture:hover .main__picture--banner {
+  opacity: 1;
+}
+
+.main__photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+.main__article {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: article;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+  position: relative;
+}
+
+.main__article::after {
+  content: "";
+  position: absolute;
+  bottom: -16px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #2f415b;
+}
+
+.main__footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: footer;
+  padding: 16px 0;
+}
+
+.main__article--firstheading {
+  color: white;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 26.4px;
+}
+
+.main__article--paragraph {
+  color: #8bacda;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.main__article--details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main__article--ethereum {
+  display: inline-block;
+  background-image: url(../images/icon-ethereum.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 11px;
+  height: 18px;
+}
+
+.main__article--price {
+  color: #00fff7;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 6px;
+}
+
+.main__article--clock {
+  display: inline-block;
+  background-image: url(../images/icon-clock.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 16px;
+  height: 16px;
+}
+
+.main__article--date {
+  color: #8bacda;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 6px;
+}
+
+.main__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+}
+
+.main__footer--photo {
+  width: 33px;
+  height: 33px;
+  display: block;
+  outline: 1px solid white;
+  border-radius: 50%;
+}
+
+.main__footer--paragraph {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #8bacda;
+}
+
+.main__footer--cta {
+  padding-left: 3px;
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  -webkit-transition: color 0.5s 0s ease;
+  transition: color 0.5s 0s ease;
+  cursor: pointer;
+}
+
+.main__footer--cta:hover {
+  color: #00fff7;
+}
+/*# sourceMappingURL=estilos.css.map */
